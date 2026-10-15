@@ -1,0 +1,18 @@
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Built something with Graphicle, wired it into your team's workflow, or
+        found a use we did not think of? Show us.
+  - type: textarea
+    id: what
+    attributes:
+      label: What you made
+      description: What it does and how Graphicle fits in. Screenshots and short clips are welcome.
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Link
+      description: A repository, a post or a demo, if there is one.

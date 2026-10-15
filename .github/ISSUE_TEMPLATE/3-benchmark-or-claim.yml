@@ -1,0 +1,44 @@
+name: Benchmark or claim
+description: A number in our docs does not reproduce, or a sentence says more than its evidence.
+labels: ["benchmarks", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Every number we publish comes with its method and its labels, in
+        [docs/benchmarks.md](https://github.com/graphicle-ai/graphicle/blob/main/docs/benchmarks.md);
+        the engine's records are in [docs/evidence/](https://github.com/graphicle-ai/graphicle/blob/main/docs/evidence/README.md)
+        (the memory comparison's per-question records are not published yet).
+        If a number does not reproduce for you, or a sentence reads stronger
+        than what is behind it, tell us here. We would rather fix a claim than
+        defend it.
+  - type: input
+    id: claim
+    attributes:
+      label: Which number or claim?
+      description: A link to the line, or a quote of it.
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is wrong with it?
+      options:
+        - It does not reproduce
+        - The wording says more than the evidence
+        - A label, a caveat or a source is missing
+        - The method has a problem
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What did you find?
+      description: What you ran (commands, versions, hardware) and what you got, or why the wording does not hold.
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: What should it say instead?

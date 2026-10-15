@@ -1,0 +1,32 @@
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tell us what would make Graphicle more useful to you. Examples from
+        your own work help most: the repository, the agents you use and the
+        moment where you wished it did something else.
+  - type: textarea
+    id: idea
+    attributes:
+      label: The idea
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it matters to you
+      description: The situation you are in, and what you do today instead.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Setting up or connecting an agent
+        - Code graph (graphicle graph)
+        - Memory and recall (sync, context, ask)
+        - The MCP tools in an agent
+        - Session capture
+        - The app (graphicle open)
+        - Install or upgrade
+        - Running it for a team
+        - Something else

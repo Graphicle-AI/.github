@@ -1,0 +1,40 @@
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ask anything about using Graphicle. If something is broken,
+        `graphicle doctor` prints the command that fixes each problem it
+        finds, and a bug that you can reproduce belongs in
+        [an issue](https://github.com/graphicle-ai/graphicle/issues/new/choose).
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The output of `graphicle --version`, if you have it installed.
+      placeholder: graphicle 0.1.0
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Setting up or connecting an agent
+        - Code graph (graphicle graph)
+        - Memory and recall (sync, context, ask)
+        - The MCP tools in an agent
+        - Session capture
+        - The app (graphicle open)
+        - Install or upgrade
+        - Running it for a team
+        - Something else
+  - type: textarea
+    id: tried
+    attributes:
+      label: What you tried
+      description: Commands and output help. Remove API keys, tokens and anything private first.
+      render: text

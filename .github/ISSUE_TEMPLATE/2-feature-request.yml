@@ -1,0 +1,50 @@
+name: Feature request
+description: Suggest a concrete improvement or a new capability.
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ideas that are still taking shape fit better in
+        [Discussions, under Ideas](https://github.com/graphicle-ai/graphicle/discussions/categories/ideas).
+        Use this form for a change you can describe.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: The situation you are in, and what gets in your way today.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like to happen?
+      description: The commands, flags, MCP tools or app behaviour you have in mind.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What have you tried instead?
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Setting up or connecting an agent (setup, connect, disconnect)
+        - Code graph (graphicle graph)
+        - Memory and recall (sync, context, ask)
+        - The MCP tools in an agent
+        - Session capture
+        - The app (graphicle open)
+        - Install, upgrade or uninstall
+        - Documentation
+        - Something else
+    validations:
+      required: true
+  - type: checkboxes
+    id: contribute
+    attributes:
+      label: Contributing
+      options:
+        - label: I would like to work on this. (Contributions need a DCO sign-off; see CONTRIBUTING.md.)

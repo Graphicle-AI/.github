@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question or help
+    url: https://github.com/graphicle-ai/graphicle/discussions/categories/q-a
+    about: Ask how to do something, or get help with setup. Run graphicle doctor first; it prints the command that fixes each problem it finds.
+  - name: Idea or feedback
+    url: https://github.com/graphicle-ai/graphicle/discussions/categories/ideas
+    about: Share an idea that is still taking shape, or tell us what you think.
+  - name: Security problem
+    url: https://github.com/graphicle-ai/graphicle/security/advisories/new
+    about: Report security problems privately, never in a public issue.

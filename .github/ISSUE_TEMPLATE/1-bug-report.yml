@@ -1,0 +1,120 @@
+name: Bug report
+description: Something in Graphicle does not work the way the docs say it should.
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this.
+
+        **Security problems do not go here.** Report them privately through
+        [a security advisory](https://github.com/graphicle-ai/graphicle/security/advisories/new),
+        as [SECURITY.md](https://github.com/graphicle-ai/graphicle/blob/main/SECURITY.md) explains.
+
+        Before you paste any output, remove what you would not want public:
+        API keys, tokens, private code and file paths.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The output of `graphicle --version`.
+      placeholder: graphicle 0.1.0
+    validations:
+      required: true
+  - type: dropdown
+    id: install
+    attributes:
+      label: How did you install it?
+      options:
+        - Homebrew (brew install graphicle-ai/tap/graphicle)
+        - The install script (install.sh)
+        - A release archive
+        - Built from source
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - macOS on Apple silicon
+        - macOS on Intel
+        - Linux on x86-64
+        - Linux on arm64
+        - Something else
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Where did it go wrong?
+      options:
+        - Setting up or connecting an agent (setup, connect, disconnect)
+        - Code graph (graphicle graph)
+        - Memory and recall (sync, context, ask)
+        - The MCP tools in an agent
+        - Session capture
+        - The app (graphicle open)
+        - Install, upgrade or uninstall
+        - Documentation
+        - Something else
+    validations:
+      required: true
+  - type: dropdown
+    id: clients
+    attributes:
+      label: Agents involved
+      multiple: true
+      options:
+        - Terminal only (no agent)
+        - Claude Code
+        - Codex
+        - Cursor
+        - VS Code
+        - Claude Desktop
+        - Another MCP client
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What you ran and what you saw. Paste errors as text rather than screenshots.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: The fewest commands that show the problem. A public repository we can try them on helps a lot.
+      placeholder: |
+        1. git clone https://github.com/<owner>/<repo> && cd <repo>
+        2. graphicle setup --yes
+        3. graphicle ask "..."
+    validations:
+      required: true
+  - type: textarea
+    id: doctor
+    attributes:
+      label: Output of graphicle doctor
+      description: Run `graphicle doctor` in the project folder and paste what it prints. It never prints API keys, but it does print paths; remove any you would rather not share.
+      render: text
+  - type: textarea
+    id: logs
+    attributes:
+      label: Other output or logs
+      render: text
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you submit
+      options:
+        - label: I searched the open and closed issues for this problem.
+          required: true
+        - label: I removed API keys, tokens and anything else private from what I pasted.
+          required: true
