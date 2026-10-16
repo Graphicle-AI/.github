@@ -30,7 +30,8 @@ cd your-repo && graphicle setup
 Setup builds the code graph, connects the coding agents it finds (Claude Code,
 Codex, Cursor, VS Code and Claude Desktop) and lists every file it changes.
 Then ask your agent to *"use graphicle to find where failed requests are
-retried"*, or run `graphicle ask` in the terminal. It runs on macOS and Linux;
+retried"*, or run `graphicle ask` in the terminal. It runs on macOS and Linux, with a
+Windows preview;
 [docs/install.md](https://github.com/graphicle-ai/graphicle/blob/main/docs/install.md)
 has the install script, the release archives and building from source.
 
